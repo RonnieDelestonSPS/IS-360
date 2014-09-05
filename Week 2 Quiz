@@ -1,0 +1,41 @@
+# Create a vector that contains 20 numbers.
+x <- c(7,4,86,1,15,29,32,4,55,2,86,0,29,22,6,9,1,15,8,10)
+
+# Use R to convert the vector from question 1 into a character vector.
+y <- as.character(x)
+
+# Use R to convert the vector from question 1 into a vector of factors.
+z <- as.factor(x)
+
+# Use R to show how many levels the vector in the previous question has.
+nlevels(z)
+
+# Use R to create a vector that takes the vector from question 1 and performs on it the formula 3𝑥2−4𝑥+1
+a <- 3 * x^2 - 4 * x + 1
+
+# Create a named list. That is, create a list with several elements that are each able to be referenced by name.
+Genre <- list("Suspense", "Play", "R&B")
+names(Genre) <- c("Movies", "Books", "Music")
+
+# Create a data frame with four columns
+characterDF <- c("a","b","c","d","e","f","g","h","i","j")
+factorDF <- c("Ronnie","John","Tiffany","Ronnie","John","Tiffany","Ronnie","John","Tiffany","Kevin")
+numDF <- c("1","2","3","4","5","6","7","8","9","10")
+dateDF <- as.Date("2014-09-05")
+combinedDF <- data.frame(First = characterDF, Second = factorDF, Third = numDF, Fourth = dateDF)
+
+# Add a row with a value for the factor column that isn’t already in the list of levels
+newcombinedDF <-data.frame(First = "", Second = factor2DF, Third = "", Fourth = NA)
+combinedDF <- rbind(combinedDF, newcombinedDF)
+
+# The code that would read in a CSV file called temperatures.csv from the current working directory.
+file.temperatures <- "temperatures.csv"
+temperatures <- read.table (file = file.temperatures)
+
+# The code that would read in a TSV file called measurements.txt from a directory other than the working directory.
+file.measurements <- "C:\Files\measurements.txt"
+measurements <- read.table (file = file.measurements, sep = "\t")
+
+# Show the code that will read in a delimited file with a pipe separator (the “|” symbol) from a website location.
+theUrl <- "http://www.files.is360.com/week2.prn"
+week2 <- read.table (file = theUrl, sep = "|")
